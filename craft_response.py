@@ -17,7 +17,7 @@ class CraftResponse:
         self.response += "Spotify Link: {}\n".format(spotify)
         self.response += "Google Play Link: {}\n".format(googleplay)
         self.response += "Apple Music Link: {}\n".format(applemusic)
-        return self.response
+        return { 'response_type': 'in_channel', 'text': self.response }
 
     def format_apple_link(self, link, country):
         pre = link.split("{")[0]
