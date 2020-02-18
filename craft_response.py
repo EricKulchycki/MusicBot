@@ -1,4 +1,4 @@
-
+import os
 
 class CraftResponse:
 
@@ -26,7 +26,7 @@ class CraftResponse:
 
     def init_response(self):
         return {
-            'token': "Yo8dkYH5HLme7rjo2DtB7mNl",
+            'token': os.environ.get('TOKEN'),
             'challenge': request.json['challenge'],
             'type': 'url_verification'
          }
