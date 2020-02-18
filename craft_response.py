@@ -13,7 +13,7 @@ class CraftResponse:
         spotify = links['spotify'][0]['link']
         googleplay = links['googleplay'][0]['link']
         applemusic = self.format_apple_link(links['itunes'][0]['link'], "ca")
-        self.response += "The Linked Album is {} by {}\n".format(artist['name'], album_name)
+        self.response += "The Linked Album is {} by {}\n".format(album_name, artist['name'])
         self.response += "Spotify Link: {}\n".format(spotify)
         self.response += "Google Play Link: {}\n".format(googleplay)
         self.response += "Apple Music Link: {}\n".format(applemusic)
