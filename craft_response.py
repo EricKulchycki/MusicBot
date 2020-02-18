@@ -23,3 +23,10 @@ class CraftResponse:
         pre = link.split("{")[0]
         post = link.split("}")[1]
         return pre + country + post
+
+    def init_response(self):
+        return {
+            'token': "Yo8dkYH5HLme7rjo2DtB7mNl",
+            'challenge': request.json['challenge'],
+            'type': 'url_verification'
+         }

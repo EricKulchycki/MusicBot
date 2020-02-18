@@ -15,5 +15,7 @@ class Dispatch:
             body = {"url": text, "country": "CA"}
             r = requests.post('https://songwhip.com/api/', json=body)
             return self.craft.get_links(r.json())
+        if reqType == "init":
+            return self.craft.init_response()
 
         return "We do not support this type of event"
